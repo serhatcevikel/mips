@@ -14,5 +14,5 @@ main:
     add $a0 $s0 $zero # load value in s0 to register a0 so that syscall prints
     #li $a0, 4 # load value in s0 to register a0 so that syscall prints
     syscall 
-	li $v0 10 # Sets $v0 to "1" to select print integer syscall
+	li $v0 10 # Sets $v0 to "10" to select exit syscall
     syscall 

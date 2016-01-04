@@ -3,7 +3,7 @@
 .globl main
 .text
 main:
-    li $s3 0x10000000 # load address 100000000 - start of array - in s3
+    li $s3 0x10000000 # load address 100000000 - start of array - in s3. that is the base address
     li $t0 5 # load value 5 into t0
     sw $t0 0($s3) # save value in t0 to memory address in s3 + 0 offset
     li $t0 10 # load value 10 into t0
