@@ -11,6 +11,7 @@ Loop1: addi $t0 1 # increment t0 by 1
     add $t2 $s0 $t1 # put the offsetted address into t2    
 # sw $t0 $t1($s0)
     sw $t0 0($t2) # save t0 value to t2 address
+    
     bne $t0 $s1 Loop1 # until t0 reaches s1 continue the loop
 
 # now that we have an array of 100, we code the while loop in C:
