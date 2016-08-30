@@ -1,9 +1,10 @@
 # example in page 69 of patterson hennessy
+# shift left and right operations
 
 .globl main
 .text
 main:
-    li $s0 1 # load imm value 5 in s0
+    li $s0 5 # load imm value 5 in s0
     sll $t2 $s0 4 # shift value in s0 4 bits left and put it in t2
     addi $a0 $t2 0 # add 0 to t2 to store in a0
     li $v0 1 # set v0 so that print integer at a0

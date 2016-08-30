@@ -1,4 +1,5 @@
 # example in page 52 of patterson hennessy
+# add subtract with paranthesis
 
 .globl main
 .text

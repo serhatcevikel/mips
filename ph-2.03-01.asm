@@ -1,4 +1,5 @@
 # example in page 55 of patterson hennessy
+# load and save arrays of data
 
 .globl main
 .text
