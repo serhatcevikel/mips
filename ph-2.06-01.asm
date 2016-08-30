@@ -1,4 +1,5 @@
 # example in page 72-73 of patterson hennessy
+# branch and jump
 
 .globl main
 .text
@@ -7,7 +8,7 @@ main:
     li $s2 8
     li $s3 9
     li $s4 9
-    bne $s3 $s4 Else # if value in s3 is not equal to value in s4, go to line labeled Else
+    bne $s3 $s4 Else # branch if not equal: if value in s3 is not equal to value in s4, go to line labeled Else
     add $s0 $s1 $s2 # if s3=s4, then add values in s1 and s2 to s0
     j Exit # unconditionally jump to line labeled Exit
 
