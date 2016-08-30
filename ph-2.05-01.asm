@@ -1,5 +1,7 @@
 # example in page 69 of patterson hennessy
 # shift left and right operations
+# reg $t2 = reg $s0 << 4 bits
+
 
 .globl main
 .text

@@ -1,4 +1,5 @@
 # example in page 75 of patterson hennessy
+# set on less than immediate
 
 .globl main
 .text

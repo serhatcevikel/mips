@@ -1,4 +1,7 @@
 # example in page 72-73 of patterson hennessy
+# conditional using bew (branch if equal)
+# C code:
+# if (i == j) f = g + h; else f = g – h;
 
 .globl main
 .text

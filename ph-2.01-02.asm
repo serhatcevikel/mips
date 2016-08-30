@@ -1,5 +1,7 @@
 # example in page 52 of patterson hennessy
 # add subtract with paranthesis
+# C code:
+# f = (g + h) – (i + j);
 
 .globl main
 .text
@@ -14,6 +16,6 @@ main:
 	li $v0 1 # Sets $v0 to "1" to select print integer syscall
     add $a0 $s0 $zero # load value in s0 to register a0 so that syscall prints
     #li $a0, 4 # load value in s0 to register a0 so that syscall prints
-    syscall 
+    syscall # print value at a0 
 	li $v0 10 # Sets $v0 to "10" to select exit syscall
     syscall 

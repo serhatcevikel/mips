@@ -1,6 +1,8 @@
 # example in page 70 of patterson hennessy
 # logical and or nor (not)
-
+# reg $t0 = reg $t1 & reg $t2
+# reg $t0 = reg $t1 | reg $t2
+# reg $t0 = ~ (reg $t1 | reg $t3)
 
 .globl main
 .text

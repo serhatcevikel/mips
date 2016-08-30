@@ -1,21 +1,27 @@
-# example in page 72-73 of patterson hennessy
+# example in page 74 of patterson hennessy
+# implement a while loop
+# corresponding C code:
+#
+# while (save[i] == k)
+# i += 1;
+# in my example the condition has been inversed. so "beq" instead of "bne" on line 33
 
 .globl main
 .text
 main:
-li $s0 0x10000000 # put address 10000000 into s0, base address
-li $t0 0 # put value 1 in t0, counter
-li $s1 100 # put value 100 in s1, length of array
-Loop1: addi $t0 1 # increment t0 by 1
-    sll $t1 $t0 2 # shift t0 value by 2 digits > multiply by 4
-    add $t2 $s0 $t1 # put the offsetted address into t2    
-# sw $t0 $t1($s0)
-    sw $t0 0($t2) # save t0 value to t2 address
-    
-    bne $t0 $s1 Loop1 # until t0 reaches s1 continue the loop
+    li $s0 0x10000000 # put address 10000000 into s0, base address
+    li $t0 0 # put value 1 in t0, counter
+    li $s1 100 # put value 100 in s1, length of array
+    Loop1: addi $t0 1 # increment t0 by 1
+        sll $t1 $t0 2 # shift t0 value by 2 digits > multiply by 4
+        add $t2 $s0 $t1 # put the offsetted address into t2    
+    # sw $t0 $t1($s0)
+        sw $t0 0($t2) # save t0 value to t2 address
+        
+        bne $t0 $s1 Loop1 # until t0 reaches s1 continue the loop
 
 # now that we have an array of 100, we code the while loop in C:
-# while (save[i] != ik)
+# while (save[i] != k)
 # i +=1;
 
 li $s0 0x10000000 # base address

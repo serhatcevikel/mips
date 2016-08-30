@@ -1,10 +1,17 @@
-# example in page 83 of patterson hennessy
+# example in page 83-85 of patterson hennessy
 # rescursive algorithm for factorial procedure
+
+# C cod:
+# int fact (int n)
+# {
+#   if (n < 1) return (1);
+#       else return (n * fact(n-1));
+# }
 
 .globl main
 .text
 main:
-    li $a0 3 # load value 5 into argument register - n in factorial(n)
+    li $a0 3 # load value 3 into argument register - n in factorial(n)
 
     jal fact # jump to factorial procedure and save the address of next instruction to ra
     j Exit # unconditional jump to exit
@@ -26,5 +33,9 @@ fact:
     mul $v0 $a0 $v0 # multiply current return value with n and adjust return value
     jr $ra # return to the jal address
 
-Exit: li $v0 10 # Sets $v0 to "10" to select exit syscall
+Exit:
+    add $a0 $v0 $zero # load value in v0 to register a0 so that syscall prints
+	li $v0 1 # Sets $v0 to "1" to select print integer syscall
+    syscall # print value at a0 
+    li $v0 10 # Sets $v0 to "10" to select exit syscall
     syscall # exit 

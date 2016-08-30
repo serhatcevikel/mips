@@ -1,5 +1,7 @@
 # example in page 72-73 of patterson hennessy
-# branch and jump
+# branch and jump, conditional using bne (branch if not equal)
+# C code:
+# if (i == j) f = g + h; else f = g – h;
 
 .globl main
 .text

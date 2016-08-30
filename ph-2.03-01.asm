@@ -1,5 +1,7 @@
 # example in page 55 of patterson hennessy
 # load and save arrays of data
+# C code:
+# f = (g + h) – (i + j);
 
 .globl main
 .text
